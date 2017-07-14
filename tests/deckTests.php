@@ -80,4 +80,4 @@ class DeckTests extends TestCase
     $this->assertEquals("Spade",$suit);
   }
 }
- ?>
+?>
