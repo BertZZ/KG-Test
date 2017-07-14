@@ -3,8 +3,8 @@ require 'card.php';
 class Deck
 {
   public $deck = array();
-  public static $suits = array("Heart","Club","Spade","Diamond");
-  public static $values = array("Ace",2,3,4,5,6,7,8,9,10,"Jack","Queen","King");
+  public static $suits = array("Diamond","Spade","Club","Heart");
+  public static $values = array("King","Queen","Jack",10,9,8,7,6,5,4,3,2,"Ace");
 
   public function makeDeck()
   {

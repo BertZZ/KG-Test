@@ -5,7 +5,12 @@ class Player
 
   public function recieveDeltCard($card)
   {
-    $this->hand[] = $card
+    $this->hand[] = $card;
+  }
+
+  public function getHand()
+  {
+    return $this->hand;
   }
 }
 ?>

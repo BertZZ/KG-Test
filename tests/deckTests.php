@@ -14,8 +14,7 @@ class DeckTests extends TestCase
   {
     $class = new Deck;
     $array = $class->deck;
-    $length = count($array);
-    $this->assertEquals(0, $length);
+    $this->assertEmpty($array);
   }
 
   public function testIKnowHowToAcessPHPArraysUsingSuitsArray()
@@ -34,19 +33,7 @@ class DeckTests extends TestCase
     $this->assertEquals(52, $length);
   }
 
-  public function testThatTheFirstCardIsTheAceofHearts()
-  {
-    $class = new Deck;
-    $class->makeDeck();
-    $array = $class->getDeck();
-    $card = $array[0];
-    $value = $card->value;
-    $suit = $card->suit;
-    $this->assertEquals("Ace", $value);
-    $this->assertEquals("Heart",$suit);
-  }
-
-  public function testThatTheLastCardIsTheKingOfDiamonds()
+  public function testThatTheBottomCardIsTheAceofHearts()
   {
     $class = new Deck;
     $class->makeDeck();
@@ -54,22 +41,23 @@ class DeckTests extends TestCase
     $card = $array[51];
     $value = $card->value;
     $suit = $card->suit;
-    $this->assertEquals("King", $value);
-    $this->assertEquals("Diamond",$suit);
+    $this->assertEquals("Ace", $value);
+    $this->assertEquals("Heart",$suit);
   }
-// These tests are probably not needed but I wanted peace of mind that some of the cards were where I expected them to be
-  public function testThatThe14thCardIsTheAceofClubs()
+
+  public function testThatTheTopCardIsTheKingOfDiamonds()
   {
     $class = new Deck;
     $class->makeDeck();
     $array = $class->getDeck();
-    $card = $array[13];
+    $card = $array[0];
     $value = $card->value;
     $suit = $card->suit;
-    $this->assertEquals("Ace", $value);
-    $this->assertEquals("Club",$suit);
+    $this->assertEquals("King", $value);
+    $this->assertEquals("Diamond",$suit);
   }
-  public function testThatThe51stCardIsTheQueenofDiamonds()
+// These tests are probably not needed but I wanted peace of mind that some of the cards were where I expected them to be
+  public function testThatThe51stCardIsTheTwoOfHearts()
   {
     $class = new Deck;
     $class->makeDeck();
@@ -77,15 +65,15 @@ class DeckTests extends TestCase
     $card = $array[50];
     $value = $card->value;
     $suit = $card->suit;
-    $this->assertEquals("Queen", $value);
-    $this->assertEquals("Diamond",$suit);
+    $this->assertEquals(2, $value);
+    $this->assertEquals("Heart",$suit);
   }
-  public function testThatThe27thCardIsTheAceOfSpades()
+  public function testThatThe26thCardIsTheAceOfSpades()
   {
     $class = new Deck;
     $class->makeDeck();
     $array = $class->getDeck();
-    $card = $array[26];
+    $card = $array[25];
     $value = $card->value;
     $suit = $card->suit;
     $this->assertEquals("Ace", $value);
