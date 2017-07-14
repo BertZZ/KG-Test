@@ -4,6 +4,7 @@ class Shuffler
   public function shuffle($deck)
   {
     shuffle($deck);
+    return $deck;
   }
 }
 ?>

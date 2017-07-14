@@ -10,10 +10,12 @@ class Game
   const PLAYER_CARDS = 7;
   public $deck;
   public $players = array();
+  public $shuffler;
 
   function __construct()
   {
     $this->deck = new Deck();
+    $this->shuffler = new Shuffler();
     $this->createPlayers(self::NUMBER_OF_PLAYERS);
   }
 
@@ -28,6 +30,12 @@ class Game
       $player = new Player();
       $this->players[] = $player;
     }
+  }
+
+  public function shuffleDeck($deck)
+  {
+    $shuffledDeck = $this->shuffler->shuffle($deck->deck);
+    $this->deck->deck = $shuffledDeck;
   }
 }
 
