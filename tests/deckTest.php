@@ -19,7 +19,7 @@ class DeckTests extends TestCase
     $this->assertEquals(52, $length);
   }
 
-  public function testThatTheBottomCardIsTheAceofHearts()
+  public function testThatTheBottomCardIsTheAceOfHearts()
   {
     $class = new Deck;
     $class->makeDeck();
