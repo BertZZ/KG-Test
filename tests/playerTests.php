@@ -24,5 +24,18 @@ class PlayerTests extends TestCase
     $this->assertEquals(1, $length);
 
   }
+
+  public function testPlayerCanRecieveMoreThanOneCardToHand()
+  {
+    $class = new Player;
+    $card = new Card("Ace","Spade");
+    $card2 = new Card("King","Hearts");
+    $class->recieveDeltCard($card);
+    $class->recieveDeltCard($card2);
+    $array = $class->getHand();
+    $length = count($array);
+    $this->assertEquals(2, $length);
+  }
+
 }
  ?>

@@ -11,17 +11,30 @@ class Game
   public $deck;
   public $players = array();
   public $shuffler;
+  public $dealer;
 
   function __construct()
   {
     $this->deck = new Deck();
     $this->shuffler = new Shuffler();
+    $this->dealer = new Dealer();
     $this->createPlayers(self::NUMBER_OF_PLAYERS);
+  }
+
+  public function startGame($deck)
+  {
+    $this->shuffleDeck($deck);
+    $this->dealCards($deck);
   }
 
   public function getDeck()
   {
     return $this->deck;
+  }
+
+  public function getPlayers()
+  {
+    return $this->players;
   }
 
   public function createPlayers($numberOfPlayers)
@@ -37,6 +50,13 @@ class Game
     $shuffledDeck = $this->shuffler->shuffle($deck->deck);
     $this->deck->deck = $shuffledDeck;
   }
+  public function dealCards($deck)
+  {
+    foreach($this->players as $player);
+      {
+        $player->recieveDeltCard($this->dealer->deal($deck));
+      }
+    }
 }
 
 ?>
