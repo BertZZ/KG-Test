@@ -41,8 +41,8 @@ class Game
 
   public function shuffleDeck($deck)
   {
-    $shuffledDeck = $this->shuffler->shuffle($deck->deck);
-    $this->deck->deck = $shuffledDeck;
+    $shuffledDeck = $this->shuffler->shuffle($deck);
+    $this->deck = $shuffledDeck;
   }
 
   public function dealCards($deck)
