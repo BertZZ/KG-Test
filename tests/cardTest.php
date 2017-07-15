@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-
+require_once './src/card.php';
 class CardTests extends TestCase
 {
   public function testCardHasValue()

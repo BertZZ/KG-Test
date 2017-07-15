@@ -1,5 +1,5 @@
 <?php
-require 'card.php';
+require_once 'card.php';
 class Deck
 {
   public $deck = array();

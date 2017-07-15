@@ -1,8 +1,8 @@
 <?php
-require 'deck.php';
-require 'player.php';
-require 'shuffler.php';
-require 'dealer.php';
+require_once 'deck.php';
+require_once 'player.php';
+require_once 'shuffler.php';
+require_once 'dealer.php';
 
 class Game
 {

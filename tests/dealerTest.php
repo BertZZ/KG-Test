@@ -1,7 +1,8 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require './src/deck.php';
-class DeckTests extends TestCase
+require_once './src/deck.php';
+require_once './src/dealer.php';
+class DealerTests extends TestCase
 {
   public function testCanDealACardFromADeck()
   {

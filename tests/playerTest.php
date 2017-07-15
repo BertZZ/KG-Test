@@ -1,6 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require './src/card.php';
+require_once './src/card.php';
+require_once './src/player.php';
 class PlayerTests extends TestCase
 {
   public function testPlayersHandStartsEmpty()

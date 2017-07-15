@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-
+require_once './src/game.php';
 class GameTests extends TestCase
 {
   public function testTheGameHasADeck()

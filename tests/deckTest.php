@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-
+require_once './src/deck.php';
 class DeckTests extends TestCase
 {
 
@@ -10,24 +10,10 @@ class DeckTests extends TestCase
     $array = $class->deck;
     $this->assertInternalType('array',$array);
   }
-  public function testDeckArrayStartsEmpty()
-  {
-    $class = new Deck;
-    $array = $class->deck;
-    $this->assertEmpty($array);
-  }
 
-  public function testIKnowHowToAcessPHPArraysUsingSuitsArray()
-  {
-    $class = new Deck;
-    $array = $class->getSuits();
-    $length = count($array);
-    $this->assertEquals(4, $length);
-  }
   public function testThatDeckContains52Cards()
   {
     $class = new Deck;
-    $class->makeDeck();
     $array = $class->getDeck();
     $length = count($array);
     $this->assertEquals(52, $length);
