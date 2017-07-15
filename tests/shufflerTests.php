@@ -13,4 +13,4 @@ class ShufflerTests extends TestCase
     $this->assertNotEquals($array,$shuffledDeck);
   }
 }
- ?>
+?>

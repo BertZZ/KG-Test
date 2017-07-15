@@ -56,7 +56,7 @@ class DeckTests extends TestCase
     $this->assertEquals("King", $value);
     $this->assertEquals("Diamond",$suit);
   }
-// These tests are probably not needed but I wanted peace of mind that some of the cards were where I expected them to be
+  // These tests are probably not needed but I wanted peace of mind that some of the cards were where I expected them to be
   public function testThatThe51stCardIsTheTwoOfHearts()
   {
     $class = new Deck;
