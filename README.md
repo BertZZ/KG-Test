@@ -12,7 +12,7 @@ The code is written using object oriented design principles. Each Class has a si
 
 ## Installation
 Clone the repository to your local machine and navigate to the project directory.
-To run the tests, run composer install to install PHPUnit.
+To run the tests, run ```composer install``` to install PHPUnit.
 Then to run the tests run ```phpunit tests``` from the root directory of the project and run ```phpunit tests --testdox``` to get a list of the tests in a psudo documentation format.
 ![tests](https://user-images.githubusercontent.com/26028408/28240019-1e93d3e8-6971-11e7-9d43-cd82f70d3df9.png)
 
